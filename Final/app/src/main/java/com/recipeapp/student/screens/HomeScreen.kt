@@ -134,23 +134,6 @@ private fun SubscriptionBanner() {
                 )
             )
     ) {
-        Box(
-            modifier = Modifier
-                .size(120.dp)
-                .align(Alignment.TopEnd)
-                .offset(x = 30.dp, y = (-30).dp)
-                .clip(CircleShape)
-                .background(Color.White.copy(alpha = 0.08f))
-        )
-        Box(
-            modifier = Modifier
-                .size(70.dp)
-                .align(Alignment.BottomEnd)
-                .offset(x = 10.dp, y = 10.dp)
-                .clip(CircleShape)
-                .background(Color.White.copy(alpha = 0.10f))
-        )
-
         Row(
             modifier = Modifier
                 .fillMaxSize()
