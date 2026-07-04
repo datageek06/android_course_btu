@@ -4,10 +4,10 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.recipeapp.student.model.Chef
 import com.recipeapp.student.model.Recipe
-import com.recipeapp.student.repository.FirebaseRepository
+import com.recipeapp.student.firebase.FireStore
 
 class RecipeViewModel : ViewModel() {
-    private val repository = FirebaseRepository()
+    private val firestore = FireStore()
 
     // Expose plain states for Jetpack Compose observers
     var chefs = mutableStateOf<List<Chef>>(emptyList())
@@ -19,15 +19,15 @@ class RecipeViewModel : ViewModel() {
     }
 
     private fun loadData() {
-        repository.getChefs { chefs.value = it }
-        repository.getRecipes { recipes.value = it }
+        firestore.getChefs { chefs.value = it }
+        firestore.getRecipes { recipes.value = it }
     }
 
     fun toggleFollowChef(chef: Chef) {
-        repository.toggleFollowChef(chef.id, chef.isFollowed)
+        firestore.toggleFollowChef(chef.id, chef.isFollowed)
     }
 
     fun toggleLikeRecipe(recipe: Recipe) {
-        repository.toggleLikeRecipe(recipe.id, recipe.isLiked)
+        firestore.toggleLikeRecipe(recipe.id, recipe.isLiked)
     }
 }
