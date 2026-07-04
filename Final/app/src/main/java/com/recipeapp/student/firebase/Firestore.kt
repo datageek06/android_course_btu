@@ -4,7 +4,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.recipeapp.student.model.Chef
 import com.recipeapp.student.model.Recipe
 
-class FirebaseRepository {
+class FireStore {
 
     private val firestore = FirebaseFirestore.getInstance()
 
