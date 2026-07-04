@@ -17,7 +17,6 @@ class FirebaseRepository {
                     for (document in it.documents) {
                         val chef = document.toObject(Chef::class.java)
                         if (chef != null) {
-                            chef.id = document.id
                             chefsList.add(chef)
                         }
                     }
@@ -35,7 +34,6 @@ class FirebaseRepository {
                     for (document in it.documents) {
                         val recipe = document.toObject(Recipe::class.java)
                         if (recipe != null) {
-                            recipe.id = document.id
                             recipesList.add(recipe)
                         }
                     }
