@@ -94,7 +94,7 @@ fun HomeScreen(viewModel: RecipeViewModel, navController: NavController) {
                                 .clickable { navController.navigate("chef_detail/${chef.id}") }
                         ) {
                             AsyncImage(
-                                model = chef.imageUrl.ifEmpty { "https://via.placeholder.com/150" },
+                                model = chef.imageUrl.ifEmpty { "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ5OFAfNvfxtF4dcqgUX6qLRowEBL9wYZ2jP73R2q6NxPEa5w-HDVRtZk&s=10" },
                                 contentDescription = chef.name,
                                 modifier = Modifier
                                     .size(100.dp)
