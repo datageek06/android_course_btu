@@ -61,7 +61,7 @@ fun SavedScreen(navController: NavHostController, viewModel: RecipeViewModel) {
                 verticalArrangement = Arrangement.spacedBy(12.dp),
                 modifier = Modifier.weight(1f)
             ) {
-                // key დაგეხმარება სჭიროა ანიმაციისათვის
+                // key საჭოროა ანიმაციისათვის
                 items(likedRecipes, key = { it.id }) { recipe ->
 
                     val dismissState = rememberSwipeToDismissBoxState(
