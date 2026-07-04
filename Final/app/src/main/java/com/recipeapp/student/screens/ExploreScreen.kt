@@ -111,7 +111,7 @@ fun ChefItemCard(chef: Chef, onClick: () -> Unit) {
             .clickable { onClick() }
     ) {
         AsyncImage(
-            model = chef.imageUrl.ifEmpty { "https://via.placeholder.com/300" },
+            model = chef.imageUrl.ifEmpty { "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ5OFAfNvfxtF4dcqgUX6qLRowEBL9wYZ2jP73R2q6NxPEa5w-HDVRtZk&s=10" },
             contentDescription = chef.name,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
