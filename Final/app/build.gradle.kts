@@ -2,7 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.gms.google-services")
-    id("org.jetbrains.kotlin.plugin.compose") // 👈 Added this plugin
+    id("org.jetbrains.kotlin.plugin.compose")
 }
 
 android {
@@ -23,10 +23,8 @@ android {
     }
 
     buildFeatures {
-        compose = true // 👈 Kept this (and removed the duplicate copy below)
+        compose = true
     }
-
-    // ✂️ DELETED: composeOptions block is no longer needed with Kotlin 2.1.0
 
     buildTypes {
         release {
